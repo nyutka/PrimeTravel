@@ -1,0 +1,56 @@
+// Our variables
+$font-family-base: 'Noto Sans', sans-serif;
+$font-family-heading:'Roboto', sans-serif;
+
+$font-size-base: 14px;
+$font-size-base-large: floor(($font-size-base * 1.5));
+$font-size-h1: floor(($font-size-base * 3));
+$font-size-h1-mobile: floor(($font-size-base * 2.25));
+$font-size-h2: floor(($font-size-base * 2));
+$font-size-h3: floor(($font-size-base * 1.5));
+$font-size-h3-mobile: floor(($font-size-base * 1.2));
+$font-size-h4: floor(($font-size-base * 1.25));
+$font-size-h5: floor(($font-size-base * 1.15));
+$font-size-h6: floor(($font-size-base * 1.1));
+$link-size: floor(($font-size-base * 1.2));
+$font-size-small: floor(($font-size-base / 1.2));
+$line-height-base: 1.615;
+$headings-line-height: 1.3;
+
+$text-color: #CEDACD;
+$heading-color: #836036;
+$link-color: #444;
+$background-color: #201F1E;
+$border-color: #e0e0e0;
+
+$button-color: #816234;
+
+$white-color: #fff;
+$darker-gray: #35322F;
+$brown-color: #594834;
+$light-brown-color: #A98056;
+$blue-color: #37445B;
+$orange-color: #ff9800;
+$gray-color: #959595;
+$dark-gray-color: #444444;
+
+/*** Breakpoints ***/
+
+$screen-xs:                  480px;
+$screen-sm:                  768px;
+$screen-md:                  992px;
+$screen-lg:                  1200px;
+
+$screen-xs-min:              $screen-xs;
+$screen-sm-min:              $screen-sm;
+$screen-md-min:              $screen-md;
+$screen-lg-min:              $screen-lg;
+
+$screen-xs-max:              ($screen-sm-min - 1);
+$screen-sm-max:              ($screen-md-min - 1);
+$screen-md-max:              ($screen-lg-min - 1);
+
+$lg: "(min-width: #{$screen-lg-min})";
+$md: "(min-width: #{$screen-md-min}) and (max-width: #{$screen-md-max})";
+$sm: "(min-width: #{$screen-sm-min}) and (max-width: #{$screen-sm-max})";
+$xs: "(max-width: #{$screen-xs-max})";

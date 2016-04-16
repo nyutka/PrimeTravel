@@ -1,0 +1,487 @@
+/***** Header *****/
+	.main-header {
+		position: absolute;
+		top: 0;
+		width: 100%;
+        z-index: 1000;
+	}
+/**** Homepage header ****/
+	@media (max-width: 360px) {
+		.home-page-header{
+			position: relative;
+		}
+	}
+	.navbar-header {
+		display: block;
+		width: 100%;
+		text-align: center;
+		.navbar-brand {
+			height: 65px;
+			width: 100%;
+			@media #{$xs} {
+				text-align: left;
+				height: 0;
+				padding: 10px 15px;
+			}
+			img {
+				text-align: center;
+				display: inline-block;
+				height: 65px;
+				@media #{$xs} {
+					position: absolute;
+					top: 10px;
+					height: 55px;
+					left: 20px;
+				}
+			}
+		}
+		.navbar-toggle {
+			border-color: $button-color;
+			margin-top: 20px;
+			.icon-bar {
+				background-color: $text-color;
+			}
+		}
+	}
+	.navbar {
+		margin-bottom: 0;
+		border: none;
+	}
+	.gradient-line {
+		@extend .gradient;
+		height: 1px;
+		width: 65%;
+		margin-top: 25px;
+		position: relative;
+		display: inline-block;
+		text-align: center;
+	}
+	.overlay{
+		height: 100%;
+		background-color: rgba(79, 65, 63, 0.24);
+	}
+	.menu-list {
+		float: none;
+		display: inline-block;
+		text-align: center;
+		li {
+			a {
+				padding: 10px 20px;
+				color: $text-color;
+				text-transform: uppercase;
+				
+				&:hover {
+					background-color: transparent;
+					color: $heading-color;
+				}
+			}
+		}
+	}
+	#header {
+		h1 {
+			color: $text-color;
+			@media #{$xs} {
+				margin-top: 100px;
+				margin-left: 20px;
+			}
+		}
+		h3 {
+			color: $text-color;
+			@media #{$xs} {
+				margin-left: 20px;
+			}
+		}
+	}
+    .btn-gold {
+        @media #{$xs} {
+            margin-left: 20px;
+        }
+    }
+    #footer {
+        i {
+            color: $text-color;
+            font-size: 23px;
+        }
+    }
+
+/******** Contact us page ********************/
+    .contactus-page {
+        background-image: url(/images/black_thread.png);
+        min-height: 100%;
+        padding-top: 170px;
+        .contact-background-img {
+
+            h1 {
+                color: $text-color;
+                font-size: 22px;
+                @media #{$xs} {
+                    font-size: 21px;
+                    line-height: 30px;
+                }
+                small {
+                    color: $text-color;
+                    font-weight: 100;
+                    @media #{$xs} {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        h2 {
+            color: $text-color;
+            margin-bottom: 25px;
+            &:after {
+                content: "";
+                width: 75px;
+                height: 3px;
+                background-color: $heading-color;
+                display: block;
+                margin-top: 15px;
+            }
+        }
+        h3 {
+            margin: 15px 0;
+            color: $text-color;
+            i {
+                color: $heading-color;
+                margin-right: 15px;
+                font-size: 20px;
+            }
+        }
+        .group { 
+            position:relative; 
+            margin-bottom:45px; 
+        }
+        input {
+            font-size:18px;
+            padding:10px 10px 10px 5px;
+            display:block;
+            width: 100%;
+            border:none;
+            border-bottom:1px solid $text-color;
+            border-radius: 0;
+            background-color: transparent;
+            &:focus { 
+                outline:none;
+            }
+        }
+
+        /* LABEL ======================================= */
+        label {
+            color: $text-color; 
+            font-size: 18px;
+            font-weight: 100;
+            position:absolute;
+            pointer-events:none;
+            left: 15px;
+            top:10px;
+            transition:0.2s ease all; 
+            -moz-transition:0.2s ease all; 
+            -webkit-transition:0.2s ease all;
+        }
+        textarea {
+            color: $text-color;
+        }
+
+        /* active state */
+        input:focus ~ label, input:valid ~ label {
+            top: -23px;
+            font-size: 17px;
+            color: $heading-color;
+        }
+
+        /* BOTTOM BARS ================================= */
+        .bar {
+            position:relative;
+            display:block;
+            width: 100%;
+        }
+        .bar:before, .bar:after {
+            content:'';
+            height:2px; 
+            width:0;
+            bottom: -1px; 
+            position:absolute;
+            background: $heading-color;
+            transition:0.2s ease all; 
+            -moz-transition:0.2s ease all; 
+            -webkit-transition:0.2s ease all;
+        }
+        .bar:before {
+            left:50%;
+        }
+        .bar:after {
+            right:50%; 
+        }
+
+        /* active state */
+        input:focus ~ .bar:before, input:focus ~ .bar:after {
+            width:50%;
+        }
+
+        /* HIGHLIGHTER ================================== */
+        .highlight {
+            position:absolute;
+            height:60%; 
+            width: 100%; 
+            top:25%; 
+            left:0;
+            pointer-events:none;
+            background-color: transparent;
+        }
+
+        /* active state */
+        input:focus ~ .highlight {
+            -webkit-animation:inputHighlighter 0.3s ease;
+            -moz-animation:inputHighlighter 0.3s ease;
+            animation:inputHighlighter 0.3s ease;
+        }
+
+        /* ANIMATIONS ================ */
+        @-webkit-keyframes inputHighlighter {
+            from { 
+                background: $heading-color; 
+            }
+            to { 
+                width:0;
+                background:transparent;
+            }
+        }
+        @-moz-keyframes inputHighlighter {
+            from {
+                background:$heading-color;
+            }
+            to {
+                width:0;
+                background:transparent;
+            }
+        }
+        @keyframes inputHighlighter {
+            from {
+                background:$heading-color;
+            }
+            to {
+                width:0; 
+                background:transparent;
+            }
+        }
+        #msg {
+            label {
+                position: static;
+            }
+            textarea {
+                border: 1px solid $text-color;
+                resize: none;
+                border-radius: 0;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+                font-size: 18px;
+                background-color: transparent;
+            }
+            button {
+                margin: 15px 0;
+                border-radius: 0;
+                padding: 10px 30px;
+                font-size: 21px;
+                color: $background-color;
+                @media #{$xs} { 
+                    width: 100%;
+                }
+                i {
+                    margin-left: 10px;
+
+                    &:last-child {
+                        display: none;
+                    }
+                }
+
+                &.loading {
+                    i:first-child {
+                        display: none;
+                    }
+                    i:last-child {
+                        display: inline-block;
+                    }
+                }
+
+                &:hover {
+                    background-color: $heading-color;
+                    color: #fff;
+                    -webkit-transition: background-color 1.5s ease-out;
+                    -moz-transition: background-color 1.5s ease-out;
+                    -o-transition: background-color 1.5s ease-out;
+                    transition: background-color 1.5s ease-out;
+                    -webkit-transition: color 1s ease-out;
+                    -moz-transition: color 1s ease-out;
+                    -o-transition: color 1s ease-out;
+                    transition: color 1s ease-out;
+                }
+            }
+        }
+        .find-us-box {
+            @media #{$sm} {
+                margin-right: 15px;
+            }
+            @media #{$xs} {
+                margin: 0;
+            }
+            address, a {
+                font-size: 18px;
+                margin: 0;
+                color: $text-color;
+                text-decoration: none;
+                i {
+                    margin-right: 15px;
+                    color: $heading-color;
+                    font-size: 20px;
+                }
+                & > div {
+                    padding-left: 30px;
+                }
+            }
+            .open-hours {
+                margin: 15px 0;
+                font-size: 18px;
+                @media #{$xs} {
+                    font-size: 14px;
+                }
+                a {
+                    color: $text-color;
+                    font-size: 18px;
+                    display: block;
+                    margin-bottom: 20px;
+
+                    &:first-child {
+                        margin-top: 20px;
+                        margin-bottom: 0;
+                    }
+                }
+                i {
+                    color: $light-brown-color;
+                    margin-right: 15px;
+                    font-size: 20px;
+                }
+            }
+            .social-icons{
+                list-style: none;
+                margin: 35px 0 15px 0;
+                ul {
+                    margin: 0;
+                    a {
+                        color: $text-color;
+                        &:hover {
+                            color: $light-brown-color;
+                            transition: 0.6s ease;
+                            -webkit-transition: 0.6s ease;
+                            -moz-transition:  0.6s ease;
+                            -o-transition:  0.6s ease;
+                        }
+                        li {
+                            display: inline-block;
+                            margin-right: 15px;
+                            i {
+                                font-size: 33px;
+                                @media #{$xs} {
+                                    font-size: 31px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+/******** About Us ************************/
+    #main {
+        background-image: url(/images/about-img.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+/******** Services *********/
+    .icon-content {
+        color: $text-color;
+        height: 70px;
+        @media #{$xs} {
+            height: 90px;
+        }
+        h5 {
+            color: $text-color;
+            font-size: 17px;
+        }
+    }
+    .service-content {
+        margin-top: 60px;
+    }
+    #banner .content header p {
+        margin-bottom: 34px;
+    }
+    .icon-img-entry {
+        height: 60px;
+        @media #{$xs} {
+            height: 80px;
+        }
+    }
+
+
+/******** Footer **********/
+    .footer {
+        background-image: url(/images/footer.png);
+        padding: 20px 0 0 0;
+        @media #{$sm} {
+           padding: 20px 0 0 0;
+        }
+        @media #{$xs} {
+           padding: 20px 0 0 0;
+            text-align: center;
+        }
+        h4 {
+            margin-bottom: 5px;
+            color: $heading-color;
+        }
+        .phone li {
+            display: block;
+            span {
+                font-size: 21px;
+                margin-bottom: 5px;
+                color: $text-color;
+                display: block;
+            }
+            &:hover {
+                color: $light-brown-color;
+            }
+        }
+        .icons a {
+            display: block;
+            i {
+                margin-right: 20px;
+            }
+        } 
+        img {
+            height: 60px;
+        }
+        ul {
+            padding: 0;
+            list-style: none;
+            margin-bottom: 8px;
+            li {
+                padding: 0;
+                &:hover a {
+                   color: $heading-color; 
+                }
+                a {
+                    text-decoration: none;
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: $text-color;
+                }
+            }
+        }
+        .copyright{
+            margin-top: 20px;
+            padding: 5px;
+            background-color: rgba(0, 0, 0, 0.45);
+            font-size: 12px;
+        }
+    }
