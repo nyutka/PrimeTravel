@@ -1,5 +1,5 @@
 # Site settings
-title: ""
+title: "Prime Travel"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://www.primetravel.am/" # the base hostname & protocol for your site
 email: "info@primetravel.am"
