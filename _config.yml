@@ -1,7 +1,7 @@
 # Site settings
 title: "Prime Travel"
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://primetravel.am" # the base hostname & protocol for your site
+url: "https://primetravel.am" # the base hostname & protocol for your site
 email: "info@primetravel.am"
 # Build settings
 markdown: kramdown
