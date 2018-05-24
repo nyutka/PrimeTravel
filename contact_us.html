@@ -31,7 +31,7 @@ title: Contact us
 				<p class="text-danger status-message hidden">Error sending email.</p>
 				<div>
 					<h2>Send Us An Email</h2>
-					<form id="contactForm" class="row">
+					<form action="https://formspree.io/info@primetravel.am" method="POST" class="row">
 						<div class="group col-sm-6">
 							<input type="text" name="name" required>
 							<span class="bar"></span>
@@ -51,11 +51,9 @@ title: Contact us
 						<div class="form-group col-sm-12" id="msg">
 							<label>Message</label>
 							<textarea class="form-control" rows="4" name="message" required></textarea>
-
-							<button type="submit" class="orange-button btn animated">
+							<input type="text" name="_gotcha" style="display:none" />
+							<button type="submit" class="orange-button btn">
 								Send
-								<i class="fa fa-paper-plane-o"></i>
-								<i class="fa fa-refresh fa-spin"></i>
 							</button>
 
 						</div>
